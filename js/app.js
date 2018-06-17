@@ -1,7 +1,22 @@
 console.log('js is linked yo');
 
 
+//deck, cards, player, gameBoard
+var deck =
+var values = []
+var cardSuits = []
 
+$(()=> {
+
+
+
+
+
+
+
+
+  
+});
 
 
 
