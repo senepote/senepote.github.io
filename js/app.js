@@ -3,10 +3,14 @@ console.log('js is linked yo');
 
 //deck, cards, player, gameBoard
 var deck =
-var values = []
-var cardSuits = []
+var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+var cardSuits = ["Spades", "Hearts", "Diamonds", "Clubs"];
 
 $(()=> {
+  function cutDeck(){
+
+    deck =
+  }
 
 
 
@@ -15,7 +19,6 @@ $(()=> {
 
 
 
-  
 });
 
 
