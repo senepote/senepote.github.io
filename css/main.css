@@ -31,18 +31,19 @@ img {
 #gameBoard {
   display: flex;
   justify-content: center;
+  /* background-image: url("../img/Wicdiv16.png");
+  background-image: url("../img/Issue_24.jpg"); */
 }
 
-#right-image {
-  float: right;
-
-}
-
-#left-image {
-  float: left;
-}
 
 .deck {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 200px;
+}
+
+#dealer, #player {
 
 }
 
@@ -53,7 +54,10 @@ img {
   width:100px ;
   border: 1px solid indigo;
   background-color: #5e3e70;
-
+  color: #d8c6db;
+  border-radius: 25px;
+  font-family: 'Cabin Sketch', bold;
+  padding: 2px 2px 2px 2px;
 
 
 }
