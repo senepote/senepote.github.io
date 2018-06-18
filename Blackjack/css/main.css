@@ -39,7 +39,7 @@ img {
   margin-right: auto;
   border-radius: 20px;
 }
-#button {
+.button {
 
   background-color: #fb2efa;
   border: 1px solid black;
@@ -54,11 +54,7 @@ img {
   width: 100px;
   height: 55px;
 }
-.buttons  {
-  display: block;
 
-
-}
 
 #gameBoard {
   display: flex;

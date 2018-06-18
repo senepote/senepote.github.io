@@ -1,4 +1,4 @@
-console.log('js is linked yo');
+// console.log('js is linked yo');
 
 
 //deck, cards, player, gameBoard
@@ -21,43 +21,62 @@ $(()=> {
                   weight = 10;
               if (cardNumbers[i] == "A")
                   weight = 11;
-              var card = { Value: cardNumbers[i],Suit: cardSuits[x], Weight: weight };
-              deck.push(card);
+              var cards = { Value: cardNumbers[i],Suit: cardSuits[x], Weight: weight };
+              deck.push(cards);
           }
       }
   }
-
+  const
 
 });
 
 
+//building the cards
+function getCardUI(card)
+    {
+        var cardElement = document.createElement('div');
+        cardElement.className = 'cards';
+        cardElement.innerHTML = cards.Suit + ' ' + cards.Value;
+        return cardElement;
+    }
 
 
 
 
 
-// 
+
+//
 // // card build for suits
 //
-// function getCardUI(card)
-// {
-// var cardElement = document.createElement('div');
-// var icon = '';
-// if (card.Suit == 'Hearts')
-// icon='♥';
-// else if (card.Suit == 'Spades')
-// icon = '♠';
-// else if (card.Suit == 'Diamonds')
-// icon = '♦';
-// else
-// icon = '♣';
-//
-// cardElement.className = 'card2';
-// cardElement.innerHTML = card.Value + '' + icon;
-// return cardElement;
-// }
-//
-//
+function createCards(card)
+{
+var cardElement = document.createElement('div');
+var icon = '';
+if (card.Suit == 'Hearts')
+icon='♥';
+else if (card.Suit == 'Spades')
+icon = '♠';
+else if (card.Suit == 'Diamonds')
+icon = '♦';
+else
+icon = '♣';
+
+cardElement.className = 'card2';
+cardElement.innerHTML = card.Value + '' + icon;
+return cardElement;
+}
+
+//buttons
+var
+$dealButton.on('click', function () {
+  
+})
+$hitButton
+$stayButton
+
+
+
+
 //
 //
 //
