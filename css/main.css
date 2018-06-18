@@ -15,7 +15,14 @@ h1 {
   font-size: 55px;
   border-radius: 50px;
   /* letter-spacing: 3px; */
+}
 
+h3 {
+  color: powderblue;
+
+  /* border: 1px solid white; */
+  display: block;
+  text-align: center;
 }
 
 img {
@@ -32,9 +39,8 @@ img {
   margin-right: auto;
   border-radius: 20px;
 }
-.button {
-  display: flex;
-  flex-direction: column;
+#button {
+
   background-color: #fb2efa;
   border: 1px solid black;
   color: white;
@@ -45,8 +51,13 @@ img {
   font-size: 16px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border-radius: 8px;
-  width: 150px;
+  width: 100px;
   height: 55px;
+}
+.buttons  {
+  display: block;
+
+
 }
 
 #gameBoard {

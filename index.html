@@ -18,6 +18,7 @@
       <!-- <img src="img/starry_sky.jpg" alt="sky"> -->
 
     <h1>Blackjack</h1>
+    <h3><div id="yourScore">Your Score: <span class="digits">0</span> Record: <span id="wins">0</span>&nbsp;/&nbsp;<span id="losses">0</span></div></h3>
       <div id="gameBoard">
         <!-- buttons here -->
         <!-- <div id="right-image"></div> -->
@@ -28,9 +29,11 @@
               <div class="cards">player</div>
             </div>
           </div>
-          <button type="dealButton" class="button">Deal</button>
-          <button type="hitButton" class="button">Hit</button>
-          <button type="stayButton" class="button">Stay</button>
+            <div class="buttons">
+              <button type="dealButton" id="button">Deal</button>
+              <button type="hitButton" id="button">Hit</button>
+              <button type="stayButton" id="button">Stay</button>
+            </div>
           <div id="dealer">
               <div class="deck">
                 <div class="cards">dealer</div>
@@ -41,6 +44,7 @@
           <img src="img/Issue_24.jpg" alt="Laura">
 
       </div>
+
     </div>
   </body>
 </html>
