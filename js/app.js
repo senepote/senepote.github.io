@@ -36,33 +36,49 @@ $(()=> {
 
 
 
-
-
-
-
-
-
-
-
-
-//FISHER GATES SHUFFLE//
-
-function shuffle(array) {
-  var copy = [], n = array.length, i;
-
-  // While there remain elements to shuffle…
-  while (n) {
-
-    // Pick a remaining element…
-    i = Math.floor(Math.random() * array.length);
-
-    // If not already shuffled, move it to the new array.
-    if (i in array) {
-      copy.push(array[i]);
-      delete array[i];
-      n--;
-    }
-  }
-
-  return copy;
-}
+// 
+// // card build for suits
+//
+// function getCardUI(card)
+// {
+// var cardElement = document.createElement('div');
+// var icon = '';
+// if (card.Suit == 'Hearts')
+// icon='♥';
+// else if (card.Suit == 'Spades')
+// icon = '♠';
+// else if (card.Suit == 'Diamonds')
+// icon = '♦';
+// else
+// icon = '♣';
+//
+// cardElement.className = 'card2';
+// cardElement.innerHTML = card.Value + '' + icon;
+// return cardElement;
+// }
+//
+//
+//
+//
+//
+// //FISHER GATES SHUFFLE//
+//
+// function shuffle(array) {
+//   var copy = [], n = array.length, i;
+//
+//   // While there remain elements to shuffle…
+//   while (n) {
+//
+//     // Pick a remaining element…
+//     i = Math.floor(Math.random() * array.length);
+//
+//     // If not already shuffled, move it to the new array.
+//     if (i in array) {
+//       copy.push(array[i]);
+//       delete array[i];
+//       n--;
+//     }
+//   }
+//
+//   return copy;
+// }
