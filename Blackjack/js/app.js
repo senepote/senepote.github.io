@@ -5,11 +5,12 @@
 var deck = new Array ();
 var cardNumbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 var cardSuits = ["Spades", "Hearts", "Diamonds", "Clubs"];
+var players = new Array();
 
 // cards
 
 $(()=> {
-  const createDeck()
+  function createDeck()
   {
       deck = new Array();
       for (var i = 0 ; i < cardNumbers.length; i++)
@@ -26,7 +27,13 @@ $(()=> {
           }
       }
   }
-  const
+  function playersBuild(){
+    players = new Array();
+    for (var i = 1; i <= num; i++){
+      var playerHand = new Array();
+      var player = { Name: input + i, ID: i, Points: 0, Hand: playerHand};
+    }
+  }
 
 });
 
@@ -69,7 +76,7 @@ return cardElement;
 //buttons
 var
 $dealButton.on('click', function () {
-  
+
 })
 $hitButton
 $stayButton
