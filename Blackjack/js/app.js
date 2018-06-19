@@ -3,11 +3,36 @@
 //buttons
 //dealButton hitButton stayButton
 $(() =>{
-$hit.on('click' , function (){
 
+var updateGame = function (){
+  $playerHand.html(playerHand.toHTML());
+  $theScore.find('.digits').html(playerHand.score());
+  $('#lose').text(lose);
+  $('#Win').text(win);
+  // $('#Tied').text(tied);
+
+}
+
+$deal.on('click', function (){
+//create new array
+    playerHand = new Hand(deck);
+    updateGame ();
+    
 })
 
+$hit.on('click' , function (){
+    playerHand.hitButton();
+    //if loop
+    if (playerHand.getHand().length >= 5 || playerHand.score() > 21){
+      $stay.trigger('click');
+    } else {
+      updateGame();
+    }
+})
 
+$stay.on('click', function (){
+
+})
 
 
 
