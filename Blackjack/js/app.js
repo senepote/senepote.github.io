@@ -42,10 +42,41 @@ $stay.on('click', function (){
 //if (player > 21) return player win = false;
 //if (dealer > 21) reutnr player win = true;
 //if dealer == 21 return text "Blackjack"
+(function (){
+  var cardDeck = new Deck();
+  var win =
+  var lose =
+})
 
+var winnerLoser = function (playersHand, dealerHand){
+    var result = '',
+        dealerScore = dealerHand.score(),
+        playerScore = playersHand.score();
+//if loops
+    if playerScore  > 21 || dealerScore === 21){
+      result = "oh no! You've lost!!";
+      lose++;
+    }
+    else if (dealerScore > playerScore){
+      result = "oh no! You've lost!!";
+      lose++;
+    }
+    else if (dealerScore > 21 || playerScore === 21 || playerScore > dealerHand.score()){
+      result = "Woooooo!! You're a winner!!!";
+      win++
+    }
+    else if (dealerScore === playerScore){
+      result = "You tied!";
+    }
 
+    return result+
+// var dealerHand = function (){
+//
+// }
 
-
+// var playerHand = fucntion (){
+//
+// }
 
 
 
