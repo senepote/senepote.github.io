@@ -1,5 +1,19 @@
 //new build
 
+//buttons
+//dealButton hitButton stayButton
+$(() =>{
+$hit.on('click' , function (){
+
+})
+
+
+
+
+
+});
+
+
 var card = function (suits, cardNumber){
   this.cardNum = function (){
     return cardNumber;
@@ -26,7 +40,7 @@ var card = function (suits, cardNumber){
 
   this.cardDesign = function (){
     var suiteType = '';
-    
+
   }
 
 
