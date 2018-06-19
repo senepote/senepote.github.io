@@ -17,7 +17,7 @@ $deal.on('click', function (){
 //create new array
     playerHand = new Hand(deck);
     updateGame ();
-    
+
 })
 
 $hit.on('click' , function (){
@@ -37,7 +37,19 @@ $stay.on('click', function (){
 
 
 });
+//functions & game logic
 
+//if (player > 21) return player win = false;
+//if (dealer > 21) reutnr player win = true;
+//if dealer == 21 return text "Blackjack"
+
+
+
+
+
+
+
+//card build
 
 var card = function (suits, cardNumber){
   this.cardNum = function (){
@@ -67,6 +79,8 @@ var card = function (suits, cardNumber){
     var suiteType = '';
 
   }
+
+//players build
 
 
 
