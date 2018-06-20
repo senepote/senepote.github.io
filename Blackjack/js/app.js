@@ -49,12 +49,11 @@ var dealerHand = function (){
 
 //card build
 //testing js switch statement
-//constructor??
 
 //alt card building
 var deck = new Array ();
 var cardNumber = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
-var cardSuit = ["Spades", "Hearts", "Diamonds", "Clubs"];
+var cardSuit = ['♠', '♥', '♦', '♣'];
 var players = new Array();
 
 function createDeck()
@@ -75,20 +74,21 @@ function createDeck()
     }
     return deck;
 }
-function shuffle()
-{
-	for (var i = 0; i < 1000; i++)
-	{
-		var location1 = Math.floor((Math.random() * deck.length));
-		var location2 = Math.floor((Math.random() * deck.length));
-		var tmp = deck[location1];
+//the shuffle
 
-		deck[location1] = deck[location2];
-		deck[location2] = tmp;
-	}
-}
+// function shuffle(){
+// 	for (var i = 0; i < 1000; i++)
+// 	{
+// 		var location1 = Math.floor((Math.random() * deck.length));
+// 		var location2 = Math.floor((Math.random() * deck.length));
+// 		var tmp = deck[location1];
+//
+// 		deck[location1] = deck[location2];
+// 		deck[location2] = tmp;
+// 	}
+// }
 
-
+//worked out diff way with Karolin
 
 function createCardDesigns(card)
 {
@@ -134,36 +134,6 @@ function load()
 	renderDeck();
 }
 
-
-// var deckOfCards = function (){
-//     var cards = [];
-//     /** Creates a new set of cards. */
-//     var newCards = function (){
-//         var i,
-//             suit,
-//             cardNumber;
-//         for (i=0;i<52;i++){
-//             suit = i%4+1;
-//             cardNumber = i%13+1;
-//             cards.push(new Card(suit,cardNumber));
-//         }
-//     };
-//     this.shuffle = function (){
-//         for(var i,j,x = cards.length; i; j = parseInt(Math.random() * i), x = cards[--i], cards[i] = cards[j], cards[j] = x);
-//         return this.getCards();
-//     };
-//     this.getDeck = function (){
-//         return cards;
-//     };
-//     this.deal = function (){
-//         if (!cards.length){
-//             console.log("No more cards! Starting a new deck.");
-//             newCards();
-//             this.shuffle();
-//         }
-//         return cards.pop();
-//     };
-// };
 
 var hand = function (deck){
   var cards = [];
@@ -250,3 +220,38 @@ $stay.on('click', function (){
 
 
 };
+
+
+
+// graveyard
+
+
+// var deckOfCards = function (){
+//     var cards = [];
+//     /** Creates a new set of cards. */
+//     var newCards = function (){
+//         var i,
+//             suit,
+//             cardNumber;
+//         for (i=0;i<52;i++){
+//             suit = i%4+1;
+//             cardNumber = i%13+1;
+//             cards.push(new Card(suit,cardNumber));
+//         }
+//     };
+//     this.shuffle = function (){
+//         for(var i,j,x = cards.length; i; j = parseInt(Math.random() * i), x = cards[--i], cards[i] = cards[j], cards[j] = x);
+//         return this.getCards();
+//     };
+//     this.getDeck = function (){
+//         return cards;
+//     };
+//     this.deal = function (){
+//         if (!cards.length){
+//             console.log("No more cards! Starting a new deck.");
+//             newCards();
+//             this.shuffle();
+//         }
+//         return cards.pop();
+//     };
+// };
