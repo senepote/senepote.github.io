@@ -48,8 +48,8 @@ $stay.on('click', function (){
 //if dealer == 21 return text "Blackjack"
 (function (){
   var cardDeck = new Deck();
-  var win =
-  var lose =
+  var win = 0;
+  var lose = 0;
 })
 
 var winnerLoser = function (playersHand, dealerHand){
@@ -57,7 +57,7 @@ var winnerLoser = function (playersHand, dealerHand){
         dealerScore = dealerHand.score(),
         playerScore = playersHand.score();
 //if loops
-    if playerScore  > 21 || dealerScore === 21){
+    if (playerScore  > 21 || dealerScore === 21){
       result = "oh no! You've lost!!";
       lose++;
     }
@@ -75,11 +75,12 @@ var winnerLoser = function (playersHand, dealerHand){
 
     return result+
 var dealerHand = function (){
-  var
-}
+  var hand = new dealerHand(deck);
 
-var playerHand = fucntion (){
-
+  while (hand.score() < 17){
+    hand.hitButton();
+  }
+  return hand;
 }
 
 
@@ -180,7 +181,45 @@ var deckOfCards = function (){
         for(var i,j,x = cards.length; i; j = parseInt(Math.random() * i), x = cards[--i], cards[i] = cards[j], cards[j] = x);
         return this.getCards();
     };
+    this.getDeck = function (){
+        return cards;
+    };
+    this.deal = function (){
+        if (!cards.length){
+            console.log("No more cards! Starting a new deck.");
+            newCards();
+            this.shuffle();
+        }
+        return cards.pop();
+    };
+};
+
+var hand = fucntion (deck){
+  var cards = [];
+
+  cards.push (deck.deal(), deck.deal());
+  this.getHand = function (){
+    return cards;
+  };
+  this.score = function (){
+    var i,
+      score = 0,
+      cardValue = 0;
+    for (i=0; i < cards.length; i++){
+      cardValue = cards[i].getValue();
+
+
+    }
+    return score;
+
+  }
+}
+
 //players build
+
+var playerHand = function (){
+
+}
 
 
 
