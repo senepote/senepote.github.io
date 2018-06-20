@@ -4,6 +4,9 @@
 //dealButton hitButton stayButton
 $(() =>{
 
+var playerHand;
+var dealerHand;
+
 var updateGame = function (){
   $playerHand.html(playerHand.toHTML());
   $theScore.find('.digits').html(playerHand.score());
@@ -82,7 +85,8 @@ var playerHand = fucntion (){
 
 
 //card build
-
+//testing js switch statement
+//constructor??
 var card = function (suits, cardNumber){
   this.cardNum = function (){
     return cardNumber;
@@ -135,6 +139,46 @@ var card = function (suits, cardNumber){
       value = 11;
       }
       return value;
+    };
+
+  this.faceCards = function (){
+    var faceCard = '';
+    switch (cardNumber){
+        case 1:
+            faceCard = "A";
+            break;
+        case 13:
+            faceCard = "K";
+            break;
+        case 12:
+            faceCard = "Q";
+            break;
+        case 11:
+            faceCard = "J";
+            break;
+        default:
+            faceCard = cardNumber;
+            break;
+        }
+        return faceCard+this.getSymbol();
+    };
+};
+var deckOfCards = function (){
+    var cards = [];
+    /** Creates a new set of cards. */
+    var newCards = function (){
+        var i,
+            suit,
+            cardNumber;
+        for (i=0;i<52;i++){
+            suit = i%4+1;
+            cardNumber = i%13+1;
+            cards.push(new Card(suit,cardNumber));
+        }
+    };
+    this.shuffle = function (){
+        for(var i,j,x = cards.length; i; j = parseInt(Math.random() * i), x = cards[--i], cards[i] = cards[j], cards[j] = x);
+        return this.getCards();
     };
 //players build
 
