@@ -2,45 +2,7 @@
 
 //buttons
 //dealButton hitButton stayButton
-$(() =>{
 
-var playerHand;
-var dealerHand;
-
-var updateGame = function (){
-  $playerHand.html(playerHand.toHTML());
-  $theScore.find('.digits').html(playerHand.score());
-  $('#lose').text(lose);
-  $('#Win').text(win);
-  // $('#Tied').text(tied);
-
-};
-
-$deal.on('click', function (){
-//create new array
-    playerHand = new Hand(deck);
-    updateGame ();
-
-});
-
-$hit.on('click' , function (){
-    playerHand.hitButton();
-    //if loop
-    if (playerHand.getHand().length >= 5 || playerHand.score() > 21){
-      $stay.trigger('click');
-    } else {
-      updateGame();
-    }
-});
-
-$stay.on('click', function (){
-  $playerHand.html(declareWinner(playerHand, dealerHand()));
-  showDeal();
-});
-  deck.shuffle();
-
-
-});
 //functions & game logic
 
 //if (player > 21) return player win = false;
@@ -235,7 +197,45 @@ var playerHand = function (){
 
 
 
+$(() =>{
 
+var playerHand;
+var dealerHand;
+
+var updateGame = function (){
+  $playerHand.html(playerHand.toHTML());
+  $theScore.find('.digits').html(playerHand.score());
+  $('#lose').text(lose);
+  $('#Win').text(win);
+  // $('#Tied').text(tied);
+
+};
+
+$deal.on('click', function (){
+//create new array
+    playerHand = new Hand(deck);
+    updateGame ();
+
+});
+
+$hit.on('click' , function (){
+    playerHand.hitButton();
+    //if loop
+    if (playerHand.getHand().length >= 5 || playerHand.score() > 21){
+      $stay.trigger('click');
+    } else {
+      updateGame();
+    }
+});
+
+$stay.on('click', function (){
+  $playerHand.html(declareWinner(playerHand, dealerHand()));
+  showDeal();
+});
+  deck.shuffle();
+
+
+});
 
 
 
