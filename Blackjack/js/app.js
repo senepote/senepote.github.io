@@ -88,113 +88,122 @@ var dealerHand = function (){
 //card build
 //testing js switch statement
 //constructor??
-var card = function (suits, cardNumber){
-  this.cardNum = function (){
-    return cardNumber;
-  };
 
-  this.cardSuit = function (){
-    var suitType = '';
-    switch (suits){
-      case 1:
-          suitType = "Hearts";
-          break;
-      case 2:
-          suitType = "Clubs";
-          break;
-      case 3:
-          suitType = "Spades";
-          break;
-      case 4:
-          suitType = "Diamonds";
-          break;
+//alt card building
+var deck = new Array ();
+var cardNumber = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+var cardSuit = ["Spades", "Hearts", "Diamonds", "Clubs"];
+var players = new Array();
+
+function createDeck()
+{
+    deck = new Array();
+    for (var i = 0 ; i < cardNumber.length; i++)
+    {
+        for(var x = 0; x < suits.length; x++)
+        {
+            var weight = parseInt(cardNumber[i]);
+            if (cardNumber[i] == "J" || cardNumber[i] == "Q" || cardNumber[i] == "K")
+                weight = 10;
+            if (cardNumber[i] == "A")
+                weight = 11;
+            var cards = { Value: cardNumber[i],Suit: cardSuits[x], Weight: weight };
+            deck.push(cards);
+        }
     }
-    return suitType;
-  };
+    return deck;
+}
+function shuffle()
+{
+	for (var i = 0; i < 1000; i++)
+	{
+		var location1 = Math.floor((Math.random() * deck.length));
+		var location2 = Math.floor((Math.random() * deck.length));
+		var tmp = deck[location1];
 
-  this.cardDesign = function (){
-    var suiteType = '';
-    switch (suit){
-      case 1:
-          suiteType = "&hearts;";
-          break;
-      case 2:
-          suiteType = "&clubs;";
-          break;
-      case 3:
-          suiteType = "&spades;";
-          break;
-      case 4:
-          suiteType = "&diams;";
-          break;
-    }
-    return suitType;
-  };
+		deck[location1] = deck[location2];
+		deck[location2] = tmp;
+	}
+}
 
-  this.getValue = function (){}
-      var value = cardNumber;
-      if (cardNumber >= 10){
-      value = 10;
-      }
-      if(cardNumber === 1) {
-      value = 11;
-      }
-      return value;
-    };
 
-  this.faceCards = function (){
-    var faceCard = '';
-    switch (cardNumber){
-        case 1:
-            faceCard = "A";
-            break;
-        case 13:
-            faceCard = "K";
-            break;
-        case 12:
-            faceCard = "Q";
-            break;
-        case 11:
-            faceCard = "J";
-            break;
-        default:
-            faceCard = cardNumber;
-            break;
-        }
-        return faceCard+this.getSymbol();
-    };
-};
-var deckOfCards = function (){
-    var cards = [];
-    /** Creates a new set of cards. */
-    var newCards = function (){
-        var i,
-            suit,
-            cardNumber;
-        for (i=0;i<52;i++){
-            suit = i%4+1;
-            cardNumber = i%13+1;
-            cards.push(new Card(suit,cardNumber));
-        }
-    };
-    this.shuffle = function (){
-        for(var i,j,x = cards.length; i; j = parseInt(Math.random() * i), x = cards[--i], cards[i] = cards[j], cards[j] = x);
-        return this.getCards();
-    };
-    this.getDeck = function (){
-        return cards;
-    };
-    this.deal = function (){
-        if (!cards.length){
-            console.log("No more cards! Starting a new deck.");
-            newCards();
-            this.shuffle();
-        }
-        return cards.pop();
-    };
-};
 
-var hand = fucntion (deck){
+function createCardDesigns(card)
+{
+var cardElement = document.createElement('div');
+var icon = '';
+if (card.Suit == 'Hearts')
+icon='♥';
+else if (card.Suit == 'Spades')
+icon = '♠';
+else if (card.Suit == 'Diamonds')
+icon = '♦';
+else
+icon = '♣';
+
+cardElement.className = 'card2';
+cardElement.innerHTML = card.Value + '' + icon;
+return cardElement;
+}
+
+function renderDeck()
+{
+	for(var i = 0; i < deck.length; i++)
+	{
+		var card = document.createElement("div");
+		var num = document.createElement("div");
+		var suit = document.createElement("div");
+		card.className = "card";
+		num.className = "num";
+		suit.className = "suit " + deck[i].Suit;
+
+		num.innerHTML = deck[i].Value;
+		card.appendChild(num);
+		card.appendChild(suit);
+
+		document.getElementById("deck").appendChild(cards);
+	}
+}
+
+function load()
+{
+	deck = getDeck();
+	shuffle();
+	renderDeck();
+}
+
+
+// var deckOfCards = function (){
+//     var cards = [];
+//     /** Creates a new set of cards. */
+//     var newCards = function (){
+//         var i,
+//             suit,
+//             cardNumber;
+//         for (i=0;i<52;i++){
+//             suit = i%4+1;
+//             cardNumber = i%13+1;
+//             cards.push(new Card(suit,cardNumber));
+//         }
+//     };
+//     this.shuffle = function (){
+//         for(var i,j,x = cards.length; i; j = parseInt(Math.random() * i), x = cards[--i], cards[i] = cards[j], cards[j] = x);
+//         return this.getCards();
+//     };
+//     this.getDeck = function (){
+//         return cards;
+//     };
+//     this.deal = function (){
+//         if (!cards.length){
+//             console.log("No more cards! Starting a new deck.");
+//             newCards();
+//             this.shuffle();
+//         }
+//         return cards.pop();
+//     };
+// };
+
+var hand = function (deck){
   var cards = [];
 
   cards.push (deck.deal(), deck.deal());
