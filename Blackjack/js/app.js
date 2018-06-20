@@ -11,14 +11,14 @@ var updateGame = function (){
   $('#Win').text(win);
   // $('#Tied').text(tied);
 
-}
+};
 
 $deal.on('click', function (){
 //create new array
     playerHand = new Hand(deck);
     updateGame ();
 
-})
+});
 
 $hit.on('click' , function (){
     playerHand.hitButton();
@@ -28,12 +28,13 @@ $hit.on('click' , function (){
     } else {
       updateGame();
     }
-})
+});
 
 $stay.on('click', function (){
-
-})
-
+  $playerHand.html(declareWinner(playerHand, dealerHand()));
+  showDeal();
+});
+  deck.shuffle();
 
 
 });
@@ -70,13 +71,13 @@ var winnerLoser = function (playersHand, dealerHand){
     }
 
     return result+
-// var dealerHand = function (){
-//
-// }
+var dealerHand = function (){
+  var
+}
 
-// var playerHand = fucntion (){
-//
-// }
+var playerHand = fucntion (){
+
+}
 
 
 
@@ -108,9 +109,33 @@ var card = function (suits, cardNumber){
 
   this.cardDesign = function (){
     var suiteType = '';
+    switch (suit){
+      case 1:
+          suiteType = "&hearts;";
+          break;
+      case 2:
+          suiteType = "&clubs;";
+          break;
+      case 3:
+          suiteType = "&spades;";
+          break;
+      case 4:
+          suiteType = "&diams;";
+          break;
+    }
+    return suitType;
+  };
 
-  }
-
+  this.getValue = function (){}
+      var value = cardNumber;
+      if (cardNumber >= 10){
+      value = 10;
+      }
+      if(cardNumber === 1) {
+      value = 11;
+      }
+      return value;
+    };
 //players build
 
 
