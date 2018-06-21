@@ -27,7 +27,37 @@ const createDeck =() => {
 }
 // call the deck
 createDeck()
+$(() => {
+var $player = $('#player')
+var $card = $("<div>").addClass("card")
 
+var cardData = deck.pop()
+var $top = $('<h3>').text(cardData['Value'])
+var $middle = $('<h3>').text(cardData['Suit'])
+var $bottom = $('<h3>').text(cardData['Weight'])
+
+$card.append($top,$middle)
+// console.log($card);
+$player.append($card)
+
+
+});
+
+$(() => {
+var $dealer = $('#dealer')
+var $card = $("<div>").addClass("card")
+
+var cardData = deck.pop()
+var $top = $('<h3>').text(cardData['Value'])
+var $middle = $('<h3>').text(cardData['Suit'])
+var $bottom = $('<h3>').text(cardData['Weight'])
+
+$card.append($top,$middle)
+// console.log($card);
+$dealer.append($card)
+
+
+});
 
 //the shuffle
 
@@ -50,7 +80,7 @@ function shuffle(){
 //remove renderDeck
 
 
-var hand = function (deck){
+var Hand = function (deck){
   var cards = [];
 
   cards.push (deck.deal(), deck.deal());
@@ -72,10 +102,6 @@ var hand = function (deck){
 }
 
 //players build
-
-// var playerHand = function (){
-//
-// }
 
 
 //functions & game logic
@@ -140,8 +166,11 @@ var dealerHand = function (){
 
 //buttons
 //dealButton hitButton stayButton
+const $deal = $('#dealButton');
+const $hit = $('#hitButton');
+const $stay = $('#stayButton');
 
-
+//jquery attach to deal button
 
 $(() =>{
 
@@ -159,9 +188,9 @@ var updateGame = function (){
 
 $deal.on('click', function (){
 //create new array
-    playerHand = new Hand(deck);
+    firstDeal = new Hand(deck);
     updateGame ();
-
+console.log(playerHand);
 });
 
 $hit.on('click' , function (){

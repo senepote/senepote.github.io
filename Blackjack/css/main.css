@@ -3,6 +3,12 @@ body {
   background-image: url("../img/starry_sky.jpg");
 }
 
+div {
+  text-align: center;
+  color: powderblue;
+  font-family: 'Fjalla One', sans-serif;
+}
+
 h1 {
   /* font-family: 'Cabin Sketch', bold; */
   font-family: 'Fjalla One', sans-serif;
@@ -75,7 +81,22 @@ img {
 
 }
 
-.cards {
+.card {
+  display: flex;
+  justify-content: center;
+  height:150px ;
+  width:100px ;
+  border: 8px solid #2f79d4;
+  text-align: center;
+  background-color: #5e3e70;
+  color: #d8c6db;
+  border-radius: 25px;
+  font-family: 'Cabin Sketch', bold;
+  padding: 2px 2px 2px 2px;
+
+}
+
+.dealerCard {
   display: flex;
   justify-content: center;
   height:150px ;
