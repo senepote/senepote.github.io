@@ -114,11 +114,11 @@ $('#player1stand').on('click', function (e) {
   // alert('')
 });
 //hit function here
-$('#dealDealer').on('click', function (e) {
-  // do stuff for dealer
-  console.log(checkWin);
-  // alert('do stuff for dealer')
-});
+// $('#dealDealer').on('click', function (e) {
+//   // do stuff for dealer
+//   console.log(checkWin);
+//   // alert('do stuff for dealer')
+// });
 
 //worked out diff way with Karolin
 //added elements to the Array
