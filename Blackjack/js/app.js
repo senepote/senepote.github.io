@@ -1,9 +1,22 @@
 //Blackjack
 //card build
 var deck = new Array();
+
+var deck1 = new Array();
+
 var cardNumber = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 var cardSuit = ['♠', '♥', '♦', '♣'];
-var players = new Array();
+var players = new Array({
+ id: 'player1',
+ name: "Morigan",
+ hand: [],
+ score: 0
+}, {
+ id: 'dealer',
+ name: "Dealer",
+ hand: [],
+ score: 0
+});
 
 const createDeck =() => {
     for (var i = 0 ; i < cardNumber.length; i++)
@@ -17,8 +30,23 @@ const createDeck =() => {
                 weight = 11;
             var cards = { Value: cardNumber[i],Suit: cardSuit[x], Weight: weight };
             deck.push(cards);
+            deck1.push(cards);
         }
     }
+
+
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+
+    deck = shuffle(deck)
     return deck;
 }
 // call the deck
@@ -27,16 +55,11 @@ deck = createDeck()
 $(() => {
 var $player1 = $("#player1")
 
-var $card = $("<div>").addClass("card")
 
-var cardData = deck.pop()
-var $top = $('<h3>').text(cardData['Value'])
-var $middle = $('<h3>').text(cardData['Suit'])
-var $bottom = $('<h3>').text(cardData['Weight'])
 
-$card.append($top,$middle)
+//$card.append($top,$middle)
 // console.log($card);
-$player1.append($card)
+//$player1.append($card)
 
 // });
 //
@@ -50,25 +73,43 @@ var $middle = $('<h3>').text(cardData['Suit'])
 var $bottom = $('<h3>').text(cardData['Weight'])
 
 $('#dealPlayer1').on('click', function (e) {
+
+console.log(deck);
+  for(var i=0; i < 2; i++){
+    for(var x=0; x < players.length; x++){
+
+
+
+      var card = deck.pop();
+      var player = players[x];
+      var $card = $("<div>").addClass("card")
+
+      var $top = $('<h3>').text(card['Value'])
+      var $middle = $('<h3>').text(card['Suit'])
+      var $bottom = $('<h3>').text(card['Weight'])
+      $card.append($top,$middle)
+
+      player.hand.push(card);
+      $('#' + player.id).append($card);
+
+    }
+  }
 	// give him another card
-  alert('do stuff to give him a card')
+  $('#dealPlayer1').hide();
+});
+
+$('#hitButton').on('click', function (e) {
+
 });
 $('#player1stand').on('click', function (e) {
 	// player 1 stand do stuff
   alert('player stands, do more stuff')
 });
+//hit function here
 $('#dealDealer').on('click', function (e) {
   // do stuff for dealer
   alert('do stuff for dealer')
 });
-
-$card.append($top,$middle)
-// console.log($card);
-$dealer.append($card)
-
-//commented out for testing
-// });
-
 
 //worked out diff way with Karolin
 //added elements to the Array
@@ -102,17 +143,17 @@ var Hand = function (deck){
 }
 //the shuffle
 
-function shuffle(deck){
-	for (var i = 0; i < 1000; i++)
-	{
-		var location1 = Math.floor((Math.random() * deck.length));
-		var location2 = Math.floor((Math.random() * deck.length));
-		var tmp = deck[location1];
-
-		deck[location1] = deck[location2];
-		deck[location2] = tmp;
-	}
-}
+// function shuffle(deck){
+// 	for (var i = 0; i < 1000; i++)
+// 	{
+// 		var location1 = Math.floor((Math.random() * deck.length));
+// 		var location2 = Math.floor((Math.random() * deck.length));
+// 		var tmp = deck[location1];
+//
+// 		deck[location1] = deck[location2];
+// 		deck[location2] = tmp;
+// 	}
+// }
 
 //players build
 var playerHand = new Hand();
@@ -166,15 +207,15 @@ var winCode = checkWin(playerScore, dealerScore);
 
     return result;
 }
-var dealerHand = function (){
-  var hand = new dealerHand(deck);
-
-  while (hand.score() < 17){
-    hand.hitButton();
-    checkWin()
-  }
-  return hand;
-}
+// var dealerHand = function (){
+//   var hand = new dealerHand(deck);
+//
+//   while (hand.score() < 17){
+//     hand.hitButton();
+//     checkWin()
+//   }
+//   return hand;
+// }
 
 //buttons
 //dealButton hitButton stayButton
@@ -194,113 +235,5 @@ var updateGame = function (){
 const $deal = $('#dealPlayer1');
 const $hit = $('#hitButton');
 const $stay = $('#player1stand');
-// $deal.on('click', function (){
-// //create new array
-// console.log('deal click event');
-//     firstDeal = new Hand(deck);
-//     updateGame ();
-// console.log(playerHand);
-// });
-//
-// $hit.on('click' , function (){
-// console.log('deal click event');
-//     playerHand.hitButton();
-//     //if loop
-//     if (playerHand.getHand().length >= 5 || playerHand.score() > 21){
-//       $stay.trigger('click');
-//     } else {
-//       updateGame();
-//     }
-// });
-//
-// $stay.on('click', function (){
-//   console.log('deal click event');
-//   $playerHand.html(declareWinner(playerHand, dealerHand()));
-//   showDeal();
-//   });
-//
-// });
 
-//commented out testing
-// });
-
-// };
-
-
-
-// graveyard
-
-// function renderDeck()
-// {
-// 	for(var i = 0; i < deck.length; i++)
-// 	{
-// 		var card = document.createElement("div");
-// 		var num = document.createElement("div");
-// 		var suit = document.createElement("div");
-// 		card.className = "card";
-// 		num.className = "num";
-// 		suit.className = "suit " + deck[i].Suit;
-//
-// 		num.innerHTML = deck[i].Value;
-// 		card.appendChild(num);
-// 		card.appendChild(suit);
-//
-// 		document.getElementById("deck").appendChild(cards);
-// 	}
-// }
-//
-// function load()
-// {
-// 	deck = getDeck();
-// 	shuffle(deck);
-// 	renderDeck();
-// }
-
-
-// function createCardDesigns(card)
-// {
-// var cardElement = document.createElement('div');
-// var icon = '';
-// if (card.Suit == 'Hearts')
-// icon='♥';
-// else if (card.Suit == 'Spades')
-// icon = '♠';
-// else if (card.Suit == 'Diamonds')
-// icon = '♦';
-// else
-// icon = '♣';
-//
-// cardElement.className = 'card2';
-// cardElement.innerHTML = card.Value + '' + icon;
-// return cardElement;
-// }
-
-// var deckOfCards = function (){
-//     var cards = [];
-//     /** Creates a new set of cards. */
-//     var newCards = function (){
-//         var i,
-//             suit,
-//             cardNumber;
-//         for (i=0;i<52;i++){
-//             suit = i%4+1;
-//             cardNumber = i%13+1;
-//             cards.push(new Card(suit,cardNumber));
-//         }
-//     };
-//     this.shuffle = function (){
-//         for(var i,j,x = cards.length; i; j = parseInt(Math.random() * i), x = cards[--i], cards[i] = cards[j], cards[j] = x);
-//         return this.getCards();
-//     };
-//     this.getDeck = function (){
-//         return cards;
-//     };
-//     this.deal = function (){
-//         if (!cards.length){
-//             console.log("No more cards! Starting a new deck.");
-//             newCards();
-//             this.shuffle();
-//         }
-//         return cards.pop();
-//     };
-// };
+});
