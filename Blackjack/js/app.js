@@ -55,15 +55,6 @@ deck = createDeck()
 $(() => {
 var $player1 = $("#player1")
 
-
-
-//$card.append($top,$middle)
-// console.log($card);
-//$player1.append($card)
-
-// });
-//
-// $(() => {
 var $dealer = $('#dealer')
 var $card = $("<div>").addClass("card")
 
@@ -71,14 +62,12 @@ var cardData = deck.pop()
 var $top = $('<h3>').text(cardData['Value'])
 var $middle = $('<h3>').text(cardData['Suit'])
 var $bottom = $('<h3>').text(cardData['Weight'])
-
+//Deal Button
 $('#dealPlayer1').on('click', function (e) {
 
 console.log(deck);
   for(var i=0; i < 2; i++){
     for(var x=0; x < players.length; x++){
-
-
 
       var card = deck.pop();
       var player = players[x];
@@ -96,10 +85,29 @@ console.log(deck);
   }
 	// give him another card
   $('#dealPlayer1').hide();
+  console.log("checkWin");
 });
 
 $('#hitButton').on('click', function (e) {
 
+  console.log(deck);
+    for(var i=0; i < 1; i++){
+      for(var x=0; x < players.length; x++){
+
+        var card = deck.pop();
+        var player = players[x];
+        var $card = $("<div>").addClass("card")
+
+        var $top = $('<h3>').text(card['Value'])
+        var $middle = $('<h3>').text(card['Suit'])
+        var $bottom = $('<h3>').text(card['Weight'])
+        $card.append($top,$middle)
+
+        player.hand.push(card);
+        $('#' + player.id).append($card);
+
+      }
+    }
 });
 $('#player1stand').on('click', function (e) {
 	// player 1 stand do stuff
@@ -113,9 +121,7 @@ $('#dealDealer').on('click', function (e) {
 
 //worked out diff way with Karolin
 //added elements to the Array
-//commented out
 
-//remove renderDeck
 var deal = function(){
     var card = Math.floor(Math.random() * deck.length);
     return deck.splice(card, 1)[0];
@@ -135,25 +141,11 @@ var Hand = function (deck){
     for (i=0; i < cards.length; i++){
       cardValue = cards[i].getValue();
 
-
     }
     return score;
 
   }
 }
-//the shuffle
-
-// function shuffle(deck){
-// 	for (var i = 0; i < 1000; i++)
-// 	{
-// 		var location1 = Math.floor((Math.random() * deck.length));
-// 		var location2 = Math.floor((Math.random() * deck.length));
-// 		var tmp = deck[location1];
-//
-// 		deck[location1] = deck[location2];
-// 		deck[location2] = tmp;
-// 	}
-// }
 
 //players build
 var playerHand = new Hand();
@@ -170,7 +162,6 @@ var dealerHand = new Hand();
   var win = 0;
   var lose = 0;
 // })
-
 
 var checkWin = function (playersHand, dealerHand){
     var result = '',
@@ -207,22 +198,6 @@ var winCode = checkWin(playerScore, dealerScore);
 
     return result;
 }
-// var dealerHand = function (){
-//   var hand = new dealerHand(deck);
-//
-//   while (hand.score() < 17){
-//     hand.hitButton();
-//     checkWin()
-//   }
-//   return hand;
-// }
-
-//buttons
-//dealButton hitButton stayButton
-//jquery attach to deal button
-// $(() =>{
-// var playerHand;
-// var dealerHand;
 
 var updateGame = function (){
   $playerHand.html(playerHand.toHTML());
