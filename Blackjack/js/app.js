@@ -1,9 +1,5 @@
-//new build
-
+//Blackjack
 //card build
-//testing js switch statement
-
-//alt card building
 var deck = new Array();
 var cardNumber = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 var cardSuit = ['♠', '♥', '♦', '♣'];
@@ -41,9 +37,9 @@ $card.append($top,$middle)
 $player.append($card)
 
 
-});
-
-$(() => {
+// });
+//
+// $(() => {
 var $dealer = $('#dealer')
 var $card = $("<div>").addClass("card")
 
@@ -56,29 +52,19 @@ $card.append($top,$middle)
 // console.log($card);
 $dealer.append($card)
 
+//commented out for testing
+// });
 
-});
-
-//the shuffle
-
-function shuffle(){
-	for (var i = 0; i < 1000; i++)
-	{
-		var location1 = Math.floor((Math.random() * deck.length));
-		var location2 = Math.floor((Math.random() * deck.length));
-		var tmp = deck[location1];
-
-		deck[location1] = deck[location2];
-		deck[location2] = tmp;
-	}
-}
 
 //worked out diff way with Karolin
 //added elements to the Array
 //commented out
 
 //remove renderDeck
-
+var deal = function(){
+    var card = Math.floor(Math.random() * createDeck.length);
+    return createDeck.splice(card, 1)[0];
+};
 
 var Hand = function (deck){
   var cards = [];
@@ -100,9 +86,23 @@ var Hand = function (deck){
 
   }
 }
+//the shuffle
+
+function shuffle(){
+	for (var i = 0; i < 1000; i++)
+	{
+		var location1 = Math.floor((Math.random() * deck.length));
+		var location2 = Math.floor((Math.random() * deck.length));
+		var tmp = deck[location1];
+
+		deck[location1] = deck[location2];
+		deck[location2] = tmp;
+	}
+}
 
 //players build
-
+var playerHand = new Hand();
+var dealerHand = new Hand();
 
 //functions & game logic
 //deal 4 cards, 2 player 2 dealer
@@ -151,7 +151,7 @@ var winCode = checkWin(playerScore, dealerScore);
     }
 
     return result;
-
+}
 var dealerHand = function (){
   var hand = new dealerHand(deck);
 
@@ -162,18 +162,10 @@ var dealerHand = function (){
   return hand;
 }
 
-
-
 //buttons
 //dealButton hitButton stayButton
-const $deal = $('#dealButton');
-const $hit = $('#hitButton');
-const $stay = $('#stayButton');
-
 //jquery attach to deal button
-
-$(() =>{
-
+// $(() =>{
 // var playerHand;
 // var dealerHand;
 
@@ -185,15 +177,19 @@ var updateGame = function (){
   // $('#Tied').text(tied);
 
 };
-
+const $deal = $('#dealButton');
+const $hit = $('#hitButton');
+const $stay = $('#stayButton');
 $deal.on('click', function (){
 //create new array
+console.log('deal click event');
     firstDeal = new Hand(deck);
     updateGame ();
 console.log(playerHand);
 });
 
 $hit.on('click' , function (){
+console.log('deal click event');
     playerHand.hitButton();
     //if loop
     if (playerHand.getHand().length >= 5 || playerHand.score() > 21){
@@ -204,27 +200,17 @@ $hit.on('click' , function (){
 });
 
 $stay.on('click', function (){
+  console.log('deal click event');
   $playerHand.html(declareWinner(playerHand, dealerHand()));
   showDeal();
-});
-  deck.shuffle();
-
+  });
 
 });
 
+//commented out testing
+// });
 
-
-
-
-
-
-
-
-
-
-
-
-};
+// };
 
 
 
