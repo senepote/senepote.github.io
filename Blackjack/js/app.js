@@ -22,9 +22,11 @@ const createDeck =() => {
     return deck;
 }
 // call the deck
-createDeck()
+deck = createDeck()
+
 $(() => {
-var $player = $('#player')
+var $player1 = $("#player1")
+
 var $card = $("<div>").addClass("card")
 
 var cardData = deck.pop()
@@ -34,8 +36,7 @@ var $bottom = $('<h3>').text(cardData['Weight'])
 
 $card.append($top,$middle)
 // console.log($card);
-$player.append($card)
-
+$player1.append($card)
 
 // });
 //
@@ -47,6 +48,19 @@ var cardData = deck.pop()
 var $top = $('<h3>').text(cardData['Value'])
 var $middle = $('<h3>').text(cardData['Suit'])
 var $bottom = $('<h3>').text(cardData['Weight'])
+
+$('#dealPlayer1').on('click', function (e) {
+	// give him another card
+  alert('do stuff to give him a card')
+});
+$('#player1stand').on('click', function (e) {
+	// player 1 stand do stuff
+  alert('player stands, do more stuff')
+});
+$('#dealDealer').on('click', function (e) {
+  // do stuff for dealer
+  alert('do stuff for dealer')
+});
 
 $card.append($top,$middle)
 // console.log($card);
@@ -62,14 +76,14 @@ $dealer.append($card)
 
 //remove renderDeck
 var deal = function(){
-    var card = Math.floor(Math.random() * createDeck.length);
-    return createDeck.splice(card, 1)[0];
+    var card = Math.floor(Math.random() * deck.length);
+    return deck.splice(card, 1)[0];
 };
 
 var Hand = function (deck){
   var cards = [];
 
-  cards.push (deck.deal(), deck.deal());
+  cards.push(deal(), deal());
   this.getHand = function (){
     return cards;
   };
@@ -88,7 +102,7 @@ var Hand = function (deck){
 }
 //the shuffle
 
-function shuffle(){
+function shuffle(deck){
 	for (var i = 0; i < 1000; i++)
 	{
 		var location1 = Math.floor((Math.random() * deck.length));
@@ -177,35 +191,35 @@ var updateGame = function (){
   // $('#Tied').text(tied);
 
 };
-const $deal = $('#dealButton');
+const $deal = $('#dealPlayer1');
 const $hit = $('#hitButton');
-const $stay = $('#stayButton');
-$deal.on('click', function (){
-//create new array
-console.log('deal click event');
-    firstDeal = new Hand(deck);
-    updateGame ();
-console.log(playerHand);
-});
-
-$hit.on('click' , function (){
-console.log('deal click event');
-    playerHand.hitButton();
-    //if loop
-    if (playerHand.getHand().length >= 5 || playerHand.score() > 21){
-      $stay.trigger('click');
-    } else {
-      updateGame();
-    }
-});
-
-$stay.on('click', function (){
-  console.log('deal click event');
-  $playerHand.html(declareWinner(playerHand, dealerHand()));
-  showDeal();
-  });
-
-});
+const $stay = $('#player1stand');
+// $deal.on('click', function (){
+// //create new array
+// console.log('deal click event');
+//     firstDeal = new Hand(deck);
+//     updateGame ();
+// console.log(playerHand);
+// });
+//
+// $hit.on('click' , function (){
+// console.log('deal click event');
+//     playerHand.hitButton();
+//     //if loop
+//     if (playerHand.getHand().length >= 5 || playerHand.score() > 21){
+//       $stay.trigger('click');
+//     } else {
+//       updateGame();
+//     }
+// });
+//
+// $stay.on('click', function (){
+//   console.log('deal click event');
+//   $playerHand.html(declareWinner(playerHand, dealerHand()));
+//   showDeal();
+//   });
+//
+// });
 
 //commented out testing
 // });
