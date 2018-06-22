@@ -85,14 +85,14 @@ console.log(deck);
   }
 	// give him another card
   $('#dealPlayer1').hide();
-  console.log("checkWin");
+  console.log(checkWin);
 });
 
 $('#hitButton').on('click', function (e) {
 
   console.log(deck);
     for(var i=0; i < 1; i++){
-      for(var x=0; x < players.length; x++){
+      for(var x=0; x < players.length; x--){
 
         var card = deck.pop();
         var player = players[x];
@@ -104,19 +104,20 @@ $('#hitButton').on('click', function (e) {
         $card.append($top,$middle)
 
         player.hand.push(card);
-        $('#' + player.id).append($card);
+        $('#player1').append($card);
 
       }
     }
 });
 $('#player1stand').on('click', function (e) {
 	// player 1 stand do stuff
-  alert('player stands, do more stuff')
+  // alert('')
 });
 //hit function here
 $('#dealDealer').on('click', function (e) {
   // do stuff for dealer
-  alert('do stuff for dealer')
+  console.log(checkWin);
+  // alert('do stuff for dealer')
 });
 
 //worked out diff way with Karolin
@@ -136,18 +137,17 @@ var Hand = function (deck){
   };
   this.score = function (){
     var i,
-      score = 0,
+      result = 0,
       cardValue = 0;
     for (i=0; i < cards.length; i++){
       cardValue = cards[i].getValue();
 
     }
-    return score;
+    return result;
 
   }
 }
 
-//players build
 var playerHand = new Hand();
 var dealerHand = new Hand();
 
