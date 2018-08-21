@@ -1,4 +1,17 @@
 body {
   background-image: url("img/fog-forest.jpg");
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;
+}
 
+.about {
+  padding-left: 20px;
+}
+
+.project-links {
+  color: #8080ff;
+}
+
+a {
+  color: #8080ff;
 }
