@@ -4,6 +4,7 @@ var deck = new Array();
 
 var deck1 = new Array();
 
+
 var cardNumber = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 var cardSuit = ['♠', '♥', '♦', '♣'];
 var players = new Array({
@@ -80,10 +81,9 @@ console.log(deck);
 
       player.hand.push(card);
       $('#' + player.id).append($card);
-
+      // if $('#player1' + 'score' <= '#dealer' + 'score')
     }
   }
-	// give him another card
   $('#dealPlayer1').hide();
   console.log(checkWin);
 });
@@ -110,18 +110,10 @@ $('#hitButton').on('click', function (e) {
     }
 });
 $('#player1stand').on('click', function (e) {
-	// player 1 stand do stuff
-  // alert('')
-});
-//hit function here
-// $('#dealDealer').on('click', function (e) {
-//   // do stuff for dealer
-//   console.log(checkWin);
-//   // alert('do stuff for dealer')
-// });
+// does a check with player1 vs dealer
 
-//worked out diff way with Karolin
-//added elements to the Array
+});
+
 
 var deal = function(){
     var card = Math.floor(Math.random() * deck.length);
@@ -169,8 +161,6 @@ var checkWin = function (playersHand, dealerHand){
         playerScore = playersHand.score();
 
 var winCode = checkWin(playerScore, dealerScore);
-//if loops
-//win and lose
 
 // check win for 21 or bust
 // once stay - no more cards
