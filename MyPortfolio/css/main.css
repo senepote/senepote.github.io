@@ -17,6 +17,19 @@ header {
 
 }
 
+div {
+  text-align: center;
+}
+
+.projects {
+  display: inline-block;
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(0, 89, 179, 0.7);
+  width: 250px;
+}
+
 .about {
   padding-left: 20px;
 }
@@ -30,7 +43,12 @@ a {
 }
 
 h2 {
-  color:#a64dff;
+  color:#cce6ff;
+}
+
+img {
+  height: 200px;
+  width: 200px;
 }
 /* modal */
 .modal {
