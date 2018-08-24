@@ -38,12 +38,12 @@ div {
   /* padding-left: 20px; */
 }
 .resume {
-  width: auto;
-  height: 50px;
+  width: 120px;
+  height: auto;
 }
 
-.info:hover {
-  transform: scale(5.0);
+.resume:hover {
+  transform: scale(6.0);
 }
 
 .project-links {
