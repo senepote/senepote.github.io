@@ -37,14 +37,41 @@ div {
 .about {
   /* padding-left: 20px; */
 }
+.resume {
+  width: auto;
+  height: 50px;
+}
+
+.info:hover {
+  transform: scale(5.0);
+}
 
 .project-links {
   color: #8080ff;
   padding-top: 20px;
 }
 
+.link-buttons {
+  border: 1px solid #8080ff;
+  width: 85px;
+  background-color: black;
+}
+
+.info {
+  padding-top: 15px;
+}
+
+.links {
+  padding-top: 10px;
+  text-align: center;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  /* margin: 5px; */
+}
 a {
   color: #8080ff;
+
 }
 
 h2, h3 {
