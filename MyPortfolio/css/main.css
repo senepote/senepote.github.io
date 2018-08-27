@@ -60,11 +60,11 @@ div {
   padding-bottom: 15px;
 }
 
-.link-buttons {
+/* .link-buttons {
   border: 1px solid #8080ff;
   width: 85px;
   background-color: black;
-}
+} */
 
 .info {
   padding-top: 15px;
@@ -80,6 +80,12 @@ div {
   display: inline-block;
   /* margin: 5px; */
 }
+
+.logos {
+  height: 60px;
+  width: auto;
+}
+
 a {
   color: #8080ff;
 
