@@ -1,7 +1,16 @@
 
 $(() => {
 
-  console.log('Starting');
+  $('.section-nav-title-profile').click((event) => {
+    if ($('.section-content-container').is( ":hidden" )) {
+      $('.section-content-container').slideDown( "slow", () => {
+        $('.section-content-container').css('display', 'flex');
+      } );
+    } else {
+      $('.section-content-container').slideUp( "slow" );
+    }
+    event.stopImmediatePropagation();
+  })
   // Click handler to expand and contract resume section
   $('#resume-header').click((event) => {
     if ($('.resume-container').is( ":hidden" )) {
