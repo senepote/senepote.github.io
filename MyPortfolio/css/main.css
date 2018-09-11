@@ -103,7 +103,8 @@ h1 {
 }
 
 body {
-  background: var(--black);
+  /* background: var(--black); */
+  background-image: url("img/CityBackground.jpg");
 }
 
 a:hover {
@@ -681,7 +682,7 @@ a:hover {
 --------------------------------------*/
 .contact-container {
   width: 100%;
-  height: 700px;
+  height: 200px;
   position: relative;
   display:none;
   animation-name: fadein;
