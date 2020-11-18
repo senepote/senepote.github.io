@@ -7,12 +7,13 @@
   --medgrey:rgb(55, 55, 55);
   --darkgrey: rgb(40,40,40);
   --white: white;
-  --blue: #29ACCC;
+  --blue: #1d7d95;
   --orange: #F76731;
   --green: #52D423;
   --yellow: #FFED2B;
   --pink: #FF11AE;
-  --purple: #6600cc;
+  /* --purple: #6600cc; */
+  --purple: #4700b3;
   --bluepurple: #751aff;
   --mellowpink: #b31aff;
 }
@@ -113,7 +114,8 @@ body, html {
   margin: 0;
   font-family: 'Lato', sans-serif;
   color: var(--grey);
-  font-size: .85em;
+  /* font-size: .85em; */
+  font-size: 15px;
 }
 
 h1 {
@@ -195,7 +197,7 @@ a:hover {
 }
 
 .section-nav-title-profile {
-  background-color: darkorchid;
+  background-color: #4700b3;
   color: white;
   padding: 15px;
   width: 120px;
@@ -206,7 +208,7 @@ a:hover {
 }
 
 .section-nav-icon-container-profile {
-  background-color: darkorchid;
+  background-color: #4700b3;
   color: white;
   position: absolute;
   width: 22px;
@@ -267,7 +269,7 @@ a:hover {
   margin-right: 3em;
 }
 .profile-title {
-  color: darkorchid;
+  color: #944dff;
 }
 
 .portrait {
