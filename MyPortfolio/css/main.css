@@ -13,6 +13,8 @@
   --yellow: #FFED2B;
   --pink: #FF11AE;
   --purple: #6600cc;
+  --bluepurple: #751aff;
+  --mellowpink: #b31aff;
 }
 
 /*
@@ -40,12 +42,20 @@
   background-color: var(--green);
 }
 
+.mellowpink-back {
+  background-color: var(--mellowpink);
+}
+
 .pink-back {
   background-color: var(--pink);
 }
 
 .orange-back {
   background-color: var(--orange);
+}
+
+.bluepurple-back {
+  background-color: var(--bluepurple);
 }
 
 .grey-font {
@@ -68,8 +78,16 @@
   color: var(--green);
 }
 
+.mellowpink {
+  color: var(--mellowpink);
+}
+
 .orange-font {
   color: var(--orange);
+}
+
+.bluepurple-font {
+  color: var(--bluepurple);
 }
 
 .block {
@@ -413,6 +431,11 @@ a:hover {
   color: var(--green);
 }
 
+.skills-list-mellowpink > li::before{
+  content: "›  ";
+  color: var(--mellowpink);
+}
+
 .skills-list-pink > li::before{
   content: "›  ";
   color: var(--pink);
@@ -421,6 +444,11 @@ a:hover {
 .skills-list-orange > li::before{
   content: "›  ";
   color: var(--orange);
+}
+
+.skills-list-bluepurple > li::before{
+  content: ">  ";
+  color: var(--bluepurple);
 }
 
 .skills-list-yellow > li::before{
@@ -437,12 +465,20 @@ a:hover {
   border-left: 3px solid var(--orange);
 }
 
+.skill-column-bluepurple {
+  border-left: 3px solid var(--bluepurple);
+}
+
 .skill-column-blue{
   border-left: 3px solid var(--blue);
 }
 
 .skill-column-green{
   border-left: 3px solid var(--green);
+}
+
+.skill-column-mellowpink{
+  border-left: 3px solid var(--mellowpink);
 }
 
 .skill-column-pink{
@@ -508,7 +544,7 @@ a:hover {
 }
 
 .portfolio-nav-item > a:hover {
-  color: var(--orange);
+  color: var(--bluepurple);
 }
 
 .portfolio-section {
@@ -545,7 +581,7 @@ a:hover {
 }
 
 .portfolio-section-sitelink a {
-  color: var(--orange);
+  color: var(--bluepurple);
   text-decoration: none;
 }
 
@@ -736,7 +772,7 @@ a:hover {
 }
 
 .contact-nav-item > a:hover {
-  color: var(--orange);
+  color: var(--bluepurple);
 }
 
 .contact-section {
@@ -773,7 +809,7 @@ a:hover {
 }
 
 .contact-section-sitelink a {
-  color: var(--orange);
+  color: var(--bluepurple);
   text-decoration: none;
 }
 
