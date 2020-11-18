@@ -4,8 +4,10 @@
   --black: rgb(20,20,20);
   --grey: rgb(135, 135, 135);
   --lightgrey:rgb(200, 200, 200);
-  --medgrey:rgb(55, 55, 55);
-  --darkgrey: rgb(40,40,40);
+  /* --medgrey:rgb(55, 55, 55); */
+  --medgrey: #40367c;
+  /* --darkgrey: rgb(40,40,40); */
+  --darkgrey: #1a1a1a;
   --white: white;
   --blue: #1d7d95;
   --orange: #F76731;
@@ -15,7 +17,7 @@
   /* --purple: #6600cc; */
   --purple: #4700b3;
   --bluepurple: #751aff;
-  --mellowpink: #b31aff;
+  --mellowpink: #9900e6;
 }
 
 /*
@@ -222,7 +224,7 @@ a:hover {
   padding: 15px;
   width: 120px;
   height: 29px;
-  font-size: 1.6em;
+  font-size: 22px;
   font-weight: bold;
   position: relative;
 }
