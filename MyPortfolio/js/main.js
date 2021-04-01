@@ -23,13 +23,24 @@ $(() => {
     event.stopImmediatePropagation();
   })
 
-  // Click handler to expand and contract resume section
+  // Click handler to expand and contract portfolio section
   $('#portfolio-header').click((event) => {
     console.log('Clicked');
     if ($('.portfolio-container').is( ":hidden" )) {
       $('.portfolio-container').slideDown( "slow" );
     } else {
       $('.portfolio-container').slideUp( "slow" );
+    }
+    event.stopImmediatePropagation();
+  })
+
+  // Click handler to expand and contract art-portfolio section
+  $('#art-portfolio-header').click((event) => {
+    console.log('Clicked');
+    if ($('.art-portfolio-container').is( ":hidden" )) {
+      $('.art-portfolio-container').slideDown( "slow" );
+    } else {
+      $('.art-portfolio-container').slideUp( "slow" );
     }
     event.stopImmediatePropagation();
   })

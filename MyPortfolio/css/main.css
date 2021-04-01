@@ -18,6 +18,7 @@
   --purple: #4700b3;
   --bluepurple: #751aff;
   --mellowpink: #9900e6;
+  --aqua: #00b3b3;
 }
 
 /*
@@ -27,6 +28,7 @@
 */
 .darkgrey-back {
   background-color: var(--darkgrey);
+  /* background-image: url("img/black-honeycomb.jpeg"); */
 }
 
 .medgrey-back {
@@ -59,6 +61,10 @@
 
 .bluepurple-back {
   background-color: var(--bluepurple);
+}
+
+.aqua-back {
+  background-color: var(--aqua);
 }
 
 .grey-font {
@@ -233,7 +239,13 @@ a:hover {
 .section-nav-icon-container {
   position: absolute;
   width: 22px;
-  padding: 16px;
+  padding-top: 16.5px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 15.5px;
+  /* padding: 16px; */
+  /* padding: 15.5px; */
+  /* margin-right: 0.8px; */
   font-size: 22px;
   left: -54px;
   top: 0;
@@ -267,6 +279,7 @@ a:hover {
 --------------------------------------*/
 .portrait, .about-contact-container {
   margin-right: 4em;
+  background-image: url("img/black-honeycomb.jpeg");
 }
 .title {
   margin-right: 3em;
@@ -719,6 +732,264 @@ a:hover {
     max-height: 190px;
   }
   .portfolio-section-title {
+    margin-top: 40px;
+  }
+  .section-nav-icon-container {
+    display: none;
+  }
+}
+
+/*-------------------------------------
+  Artwork Portfolio Section
+--------------------------------------*/
+.art-portfolio-section {
+  margin-top: 1.5em;
+  border-bottom: 1px dotted var(--medgrey);
+  width: 100%;
+  height: 430px;
+  display: flex;
+}
+
+.art-portfoilio-section-image, .art-portfoilio-section-title {
+  height: 410px;
+}
+
+.art-portfoilio-section-image {
+  width: 44%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.art-portfoilio-section-image > img {
+  max-height: 380px;
+}
+
+.art-portfolio-container {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display:none;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+.art-portfolio-section-title, .art-portfolio-section-image {
+  height: 210px;
+  width: auto;
+}
+
+
+.art-portfolio-menu-container {
+  width: 147px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.art-portfolio-content-container {
+  margin-left: 147px;
+  width: 81%;
+  max-height: 700px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding: 2em;
+}
+
+.art-portfolio-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 470px;
+  margin-top: 2em;
+  padding-right: 10px;
+  padding-top: 6em;
+  border-right: 1px dotted var(--medgrey);
+}
+
+.art-portfolio-nav-item {
+  padding: 1em;
+}
+
+.art-portfolio-nav-item > a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.art-portfolio-nav-item > a:hover {
+  color: var(--aqua);
+}
+
+.art-portfolio-section {
+  margin-top: 1.5em;
+  border-bottom: 1px dotted var(--medgrey);
+  width: 100%;
+  height: 230px;
+  display: flex;
+}
+
+.art-portfolio-section-image, .art-portfolio-section-title {
+  height: 210px;
+}
+
+.art-portfolio-section-image {
+  width: 44%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.art-portfolio-section-image > img {
+  max-height: 180px;
+}
+
+.art-portfolio-section-title {
+  width: 66%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.art-portfolio-section-tech, .art-portfolio-section-description, .art-portfolio-section-title, .art-portfolio-section-sitelink {
+  border-bottom: 1px solid var(--medgrey);
+  padding: .7em 0;
+}
+
+.art-portfolio-section-sitelink a {
+  color: var(--aqua);
+  text-decoration: none;
+}
+
+.art-portfolio-section-sitelink a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.art-portfolio-section-title {
+  padding-top: 0;
+  font-size: 2em;
+}
+.art-portfolio-section-tech {
+  color: var(--blue);
+}
+.art-portfolio-header {
+  padding-bottom: 1px;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 650px;
+    padding-top: 30px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    min-width: 170px;
+  }
+  .portrait {
+    width: 80px;
+    height: 100px;
+  }
+  .art-portfolio-menu-container {
+    width: 110px;
+  }
+  .art-portfolio-content-container {
+    margin-left: 110px;
+  }
+  .portfoilio-section-image > img {
+    max-height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 400px;
+    padding-top: 15px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    max-width: 50px;
+  }
+  #profile-header {
+    flex-wrap: wrap;
+  }
+  .portrait, .title, .about-contact-container {
+    margin-right: 1em;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 5em;
+  }
+  .resume-container {
+    flex-wrap: wrap;
+  }
+  .resume-content-container {
+    width: 90%;
+  }
+  .resume-skills-container {
+    width: 90%;
+    padding: 0;
+  }
+  #tech-skills-header {
+    margin-top: 3em;
+  }
+  .art-portfolio-menu-container {
+    width: 100%;
+    height: 3.5em;
+    border-bottom: 1px dotted var(--medgrey);
+  }
+  .art-portfolio-nav {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: .2em;
+  }
+  .art-portfolio-container {
+    height: 600px;
+  }
+  .art-portfolio-content-container {
+    margin: auto;
+    margin-top: 3.3em;
+    width: 90%;
+    padding: 0;
+    max-height: 500px;
+  }
+  .portfoilio-section-image > img {
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 340px;
+    padding-top: 15px;
+  }
+  .portrait {
+    display: none;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 1em;
+  }
+  .resume-history-work-title {
+    max-width: 3em;
+  }
+  .table-key-skills {
+    width: 4em;
+  }
+  .art-portfolio-section {
+    flex-direction: column;
+    height: 400px;
+  }
+  .portfoilio-section-image, .portfoilio-section-title {
+    height: 150px;
+    width: 100%;
+  }
+  .portfoilio-section-image > img {
+    max-height: 190px;
+  }
+  .art-portfolio-section-title {
     margin-top: 40px;
   }
   .section-nav-icon-container {
