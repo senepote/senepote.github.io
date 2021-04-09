@@ -440,42 +440,43 @@ a:hover {
 }
 
 .skills-list-blue > li::before{
-  content: "›  ";
+  content: "•  ";
   color: var(--blue);
 }
 
 .skills-list-green > li::before{
-  content: "›  ";
+  content: "•  ";
   color: var(--green);
 }
 
 .skills-list-mellowpink > li::before{
-  content: "›  ";
+  content: "•  ";
   color: var(--mellowpink);
 }
 
 .skills-list-pink > li::before{
-  content: "›  ";
+  content: "•  ";
   color: var(--pink);
 }
 
 .skills-list-orange > li::before{
-  content: "›  ";
+  content: "•  ";
   color: var(--orange);
 }
 
 .skills-list-bluepurple > li::before{
-  content: ">  ";
+  content: "•  ";
   color: var(--bluepurple);
 }
 
 .skills-list-yellow > li::before{
-  content: "›  ";
+  /* content: "›  "; */
+  content: "•  ";
   color: var(--yellow);
 }
 
 .skills-list-purple > li::before{
-  content: "›  ";
+  content: "•  ";  
   color: var(--purple);
 }
 
