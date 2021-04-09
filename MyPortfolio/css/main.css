@@ -476,7 +476,7 @@ a:hover {
 }
 
 .skills-list-purple > li::before{
-  content: "•  ";  
+  content: "•  ";
   color: var(--purple);
 }
 
@@ -568,6 +568,7 @@ a:hover {
 
 .portfolio-section {
   margin-top: 1.5em;
+  padding-bottom: 1.5em;
   border-bottom: 1px dotted var(--medgrey);
   width: 100%;
   height: 230px;
@@ -579,13 +580,14 @@ a:hover {
 }
 
 .portfoilio-section-image {
-  width: 44%;
+  max-width: 44%;
   padding: 1em;
   box-sizing: border-box;
 }
 
 .portfoilio-section-image > img {
   max-height: 180px;
+  width: 220px;
 }
 
 .portfoilio-section-title {
