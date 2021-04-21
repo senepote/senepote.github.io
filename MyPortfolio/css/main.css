@@ -168,6 +168,16 @@ a:hover {
   font-size: 2em;
 }
 
+.extraAdditions {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.additions {
+  width: 400px;
+  border: 13px solid black;
+}
 
 /*
 =======================================
