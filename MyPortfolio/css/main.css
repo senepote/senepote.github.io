@@ -455,6 +455,11 @@ a:hover {
   color: var(--blue);
 }
 
+.skills-list-aqua > li::before{
+  content: "•  ";
+  color: var(--aqua);
+}
+
 .skills-list-green > li::before{
   content: "•  ";
   color: var(--green);
