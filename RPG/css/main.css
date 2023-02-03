@@ -1,0 +1,18 @@
+:root {
+  --black: rgb(20,20,20);
+  --grey: rgb(135, 135, 135);
+  --lightgrey:rgb(200, 200, 200);
+  --medgrey:rgb(55, 55, 55);
+  --darkgrey: rgb(40,40,40);
+  --white: white;
+  --blue: #29ACCC;
+  --orange: #F76731;
+  --green: #52D423;
+  --yellow: #FFED2B;
+  --pink: #FF11AE;
+  --purple: #6600cc;
+}
+
+html {
+  background-color: var(--green);
+}
