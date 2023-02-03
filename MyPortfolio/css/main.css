@@ -1,0 +1,1260 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+  --black: rgb(20,20,20);
+  --grey: rgb(135, 135, 135);
+  --lightgrey:rgb(200, 200, 200);
+  /* --medgrey:rgb(55, 55, 55); */
+  --medgrey: #40367c;
+  /* --darkgrey: rgb(40,40,40); */
+  --darkgrey: #1a1a1a;
+  --white: white;
+  --blue: #1d7d95;
+  --orange: #F76731;
+  --green: #52D423;
+  --yellow: #FFED2B;
+  --pink: #FF11AE;
+  /* --purple: #6600cc; */
+  --purple: #4700b3;
+  --bluepurple: #751aff;
+  --mellowpink: #9900e6;
+  --aqua: #00b3b3;
+}
+
+/*
+=======================================
+  Shared
+=======================================
+*/
+.darkgrey-back {
+  background-color: var(--darkgrey);
+  /* background-image: url("img/black-honeycomb.jpeg"); */
+}
+
+.medgrey-back {
+  background-color: var(--medgrey);
+}
+
+.white-back {
+  background-color: var(--white);
+}
+
+.blue-back {
+  background-color: var(--blue);
+}
+
+.green-back {
+  background-color: var(--green);
+}
+
+.mellowpink-back {
+  background-color: var(--mellowpink);
+}
+
+.pink-back {
+  background-color: var(--pink);
+}
+
+.orange-back {
+  background-color: var(--orange);
+}
+
+.bluepurple-back {
+  background-color: var(--bluepurple);
+}
+
+.aqua-back {
+  background-color: var(--aqua);
+}
+
+.grey-font {
+  color: var(--grey);
+}
+
+.lightgrey-font {
+  color: var(--lightgrey)
+}
+
+.white-font {
+  color: var(--white);
+}
+
+.blue-font {
+  color: var(--blue);
+}
+
+.green-font {
+  color: var(--green);
+}
+
+.mellowpink {
+  color: var(--mellowpink);
+}
+
+.orange-font {
+  color: var(--orange);
+}
+
+.bluepurple-font {
+  color: var(--bluepurple);
+}
+
+.block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+/*
+=======================================
+  Body Styling
+=======================================
+*/
+
+* {
+  /* border: 1px solid gold; */
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
+  color: var(--grey);
+  /* font-size: .85em; */
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+body {
+  /* background: var(--black); */
+  background-image: url("img/CityBackground.jpg");
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+/*
+=======================================
+  Container
+=======================================
+*/
+.container {
+  width: 800px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+/*
+=======================================
+  Social Header Styling
+=======================================
+*/
+.social-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 0;
+}
+
+.social {
+  padding-left: 15px;
+  font-size: 2em;
+}
+
+.extraAdditions {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.additions {
+  width: 400px;
+  border: 13px solid black;
+}
+
+/*
+=======================================
+  Main Content
+=======================================
+*/
+/*-------------------------------------
+  Common container settings
+--------------------------------------*/
+.main-container, .section-container, .section-nav, .section-content {
+  width: 100%;
+}
+
+/*-------------------------------------
+  Section Containers
+--------------------------------------*/
+.section-container {
+  border-bottom: 1px dotted var(--grey);
+}
+
+.section-content {
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.section-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*-------------------------------------
+  Section Nav
+--------------------------------------*/
+.section-nav {
+  position: relative;
+}
+
+.section-nav-title-profile {
+  background-color: #4700b3;
+  color: white;
+  padding: 15px;
+  width: 120px;
+  height: 29px;
+  font-size: 1.6em;
+  font-weight: bold;
+  position: relative;
+}
+
+.section-nav-icon-container-profile {
+  background-color: #4700b3;
+  color: white;
+  position: absolute;
+  width: 22px;
+  padding: 16px;
+  font-size: 22px;
+  left: -54px;
+  top: 0;
+}
+
+.section-nav-title {
+  padding: 14px;
+  width: 120px;
+  height: 29px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+.section-nav-icon-container {
+  position: absolute;
+  width: 22px;
+  padding-top: 16.5px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 15.5px;
+  /* padding: 16px; */
+  /* padding: 15.5px; */
+  /* margin-right: 0.8px; */
+  font-size: 22px;
+  left: -54px;
+  top: 0;
+}
+
+.section-chevron-container {
+  width: 20px;
+  height: 20px;
+  font-size: 2em;
+  position: absolute;
+  right: 1em;
+  top: .5em;
+}
+
+.header-image {
+  height: 160px;
+  width: auto;
+}
+/*-------------------------------------
+  Section Header
+--------------------------------------*/
+.section-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 2em;
+}
+
+/*-------------------------------------
+  About Section
+--------------------------------------*/
+.portrait, .about-contact-container {
+  margin-right: 4em;
+  background-image: url("img/black-honeycomb.jpeg");
+}
+.title {
+  margin-right: 3em;
+}
+.profile-title {
+  color: #944dff;
+}
+
+.portrait {
+  width: 110px;
+  height: 130px;
+  border: .5em solid var(--medgrey);
+}
+
+.title h1, h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.title h2 {
+  font-size: 1.3em;
+  padding-top: .2em
+}
+
+.title h1 {
+  min-width: 230px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.section-content-container > .section-content {
+  padding-top: 0;
+}
+
+.table-key {
+  padding: 5px;
+  font-weight: 700;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+.social-link {
+  color: var(--grey);
+  text-decoration: none;
+}
+/*-------------------------------------
+  Resume Section
+--------------------------------------*/
+.resume-container{
+  display: none;
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fadein {
+    0%   {opacity: 0;}
+    25%  {opacity: .3;}
+    50%  {opacity: .6;}
+    100% {opacity: 1;}
+}
+
+.resume-content {
+  margin: 2em 0;
+}
+
+.resume-content-container {
+  width: 60%;
+}
+
+.resume-skills-container {
+  width: 40%;
+  padding-left: 2em;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.resume-header {
+  width: 100%;
+  padding: .4em;
+  margin-top: 1em;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+#education-header {
+  margin-top: 3em;
+}
+
+.resume-titles {
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.resume-history-title {
+  position: relative;
+  width: 100%;
+}
+
+.resume-history-title-icon {
+  padding: .5em;
+  font-size: 1.3em;
+}
+
+.resume-history-title-container {
+  display: flex;
+  margin-top: 1em;
+}
+
+.resume-history-work-duration {
+  font-size: 1.3em;
+  position: absolute;
+  right: 1px;
+  top: 0;
+}
+
+.resume-history-work-title, .resume-history-education-title {
+  font-size: 1.4em;
+}
+
+.resume-history-content {
+  padding: 1.4em 0;
+  border-bottom: 1px dotted var(--grey);
+}
+
+.skills-table {
+  /* border-collapse:separate;
+  border-spacing:2em; */
+}
+
+.row-space {
+  height: 2em;
+}
+
+.table-key-skills {
+  font-weight: 600;
+  text-align: right;
+  font-size: 1em;
+  padding: 1.2em;
+  width: 8em;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 1.2em;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.skills-list-blue > li::before{
+  content: "•  ";
+  color: var(--blue);
+}
+
+.skills-list-aqua > li::before{
+  content: "•  ";
+  color: var(--aqua);
+}
+
+.skills-list-green > li::before{
+  content: "•  ";
+  color: var(--green);
+}
+
+.skills-list-mellowpink > li::before{
+  content: "•  ";
+  color: var(--mellowpink);
+}
+
+.skills-list-pink > li::before{
+  content: "•  ";
+  color: var(--pink);
+}
+
+.skills-list-orange > li::before{
+  content: "•  ";
+  color: var(--orange);
+}
+
+.skills-list-bluepurple > li::before{
+  content: "•  ";
+  color: var(--bluepurple);
+}
+
+.skills-list-yellow > li::before{
+  /* content: "›  "; */
+  content: "•  ";
+  color: var(--yellow);
+}
+
+.skills-list-purple > li::before{
+  content: "•  ";
+  color: var(--purple);
+}
+
+.skill-column-orange {
+  border-left: 3px solid var(--orange);
+}
+
+.skill-column-bluepurple {
+  border-left: 3px solid var(--bluepurple);
+}
+
+.skill-column-blue{
+  border-left: 3px solid var(--blue);
+}
+
+.skill-column-green{
+  border-left: 3px solid var(--green);
+}
+
+.skill-column-mellowpink{
+  border-left: 3px solid var(--mellowpink);
+}
+
+.skill-column-pink{
+  border-left: 3px solid var(--pink);
+}
+
+.skill-column-yellow{
+  border-left: 3px solid var(--yellow);
+}
+
+.skill-column-purple{
+  border-left: 3px solid var(--purple);
+}
+
+/*-------------------------------------
+  Portfolio Section
+--------------------------------------*/
+.portfolio-container {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display:none;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+.portfolio-menu-container {
+  width: 147px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.portfolio-content-container {
+  margin-left: 147px;
+  width: 81%;
+  max-height: 700px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding: 2em;
+}
+
+.portfolio-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 470px;
+  margin-top: 2em;
+  padding-right: 10px;
+  padding-top: 6em;
+  border-right: 1px dotted var(--medgrey);
+}
+
+.portfolio-nav-item {
+  padding: 1em;
+}
+
+.portfolio-nav-item > a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.portfolio-nav-item > a:hover {
+  color: var(--bluepurple);
+}
+
+.portfolio-section {
+  margin-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px dotted var(--medgrey);
+  width: 100%;
+  height: 230px;
+  display: flex;
+}
+
+.portfoilio-section-image, .portfoilio-section-title {
+  height: 210px;
+}
+
+.portfoilio-section-image {
+  max-width: 44%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.portfoilio-section-image > img {
+  max-height: 180px;
+  width: 220px;
+}
+
+.portfoilio-section-title {
+  width: 66%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.portfolio-section-tech, .portfolio-section-description, .portfolio-section-title, .portfolio-section-sitelink {
+  border-bottom: 1px solid var(--medgrey);
+  padding: .7em 0;
+}
+
+.portfolio-section-sitelink a {
+  color: var(--bluepurple);
+  text-decoration: none;
+}
+
+.portfolio-section-sitelink a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.portfolio-section-title {
+  padding-top: 0;
+  font-size: 2em;
+}
+.portfolio-section-tech {
+  color: var(--blue);
+}
+
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 650px;
+    padding-top: 30px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    min-width: 170px;
+  }
+  .portrait {
+    width: 80px;
+    height: 100px;
+  }
+  .portfolio-menu-container {
+    width: 110px;
+  }
+  .portfolio-content-container {
+    margin-left: 110px;
+  }
+  .portfoilio-section-image > img {
+    max-height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 400px;
+    padding-top: 15px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    max-width: 50px;
+  }
+  #profile-header {
+    flex-wrap: wrap;
+  }
+  .portrait, .title, .about-contact-container {
+    margin-right: 1em;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 5em;
+  }
+  .resume-container {
+    flex-wrap: wrap;
+  }
+  .resume-content-container {
+    width: 90%;
+  }
+  .resume-skills-container {
+    width: 90%;
+    padding: 0;
+  }
+  #tech-skills-header {
+    margin-top: 3em;
+  }
+  .portfolio-menu-container {
+    width: 100%;
+    height: 3.5em;
+    border-bottom: 1px dotted var(--medgrey);
+  }
+  .portfolio-nav {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: .2em;
+  }
+  .portfolio-container {
+    height: 600px;
+  }
+  .portfolio-content-container {
+    margin: auto;
+    margin-top: 3.3em;
+    width: 90%;
+    padding: 0;
+    max-height: 500px;
+  }
+  .portfoilio-section-image > img {
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 340px;
+    padding-top: 15px;
+  }
+  .portrait {
+    display: none;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 1em;
+  }
+  .resume-history-work-title {
+    max-width: 3em;
+  }
+  .table-key-skills {
+    width: 4em;
+  }
+  .portfolio-section {
+    flex-direction: column;
+    height: 400px;
+  }
+  .portfoilio-section-image, .portfoilio-section-title {
+    height: 150px;
+    width: 100%;
+  }
+  .portfoilio-section-image > img {
+    max-height: 190px;
+  }
+  .portfolio-section-title {
+    margin-top: 40px;
+  }
+  .section-nav-icon-container {
+    display: none;
+  }
+}
+
+/*-------------------------------------
+  Artwork Portfolio Section
+--------------------------------------*/
+
+.art-portfolio-section {
+  margin-top: 1.5em;
+  border-bottom: 1px dotted var(--medgrey);
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+/* .art-portfoilio-section-image, .art-portfoilio-section-title {
+  height: 400px;
+} */
+
+.art-portfoilio-section-image {
+  width: 44%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.art-portfoilio-section-image > img {
+  max-height: 400px;
+}
+
+.art-portfolio-container {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display:none;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  /* width: 100%;
+  height: 400px;
+  position: relative;
+  display:none;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in; */
+}
+
+.art-portfoilio-section-title {
+  height: 400px;
+  width: 225px;
+}
+
+.art-portfolio-section-image {
+  height: 400px;
+  width: auto;
+}
+
+.art-portfolio-menu-container {
+  width: 147px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.art-portfolio-content-container {
+  margin-left: 147px;
+  width: 81%;
+  max-height: 700px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding: 2em;
+}
+
+.art-portfolio-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 470px;
+  margin-top: 2em;
+  padding-right: 10px;
+  padding-top: 6em;
+  border-right: 1px dotted var(--medgrey);
+}
+
+.art-portfolio-nav-item {
+  padding: 1em;
+}
+
+.art-portfolio-nav-item > a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.art-portfolio-nav-item > a:hover {
+  color: var(--aqua);
+}
+
+.art-portfolio-section {
+  margin-top: 1.5em;
+  border-bottom: 1px dotted var(--medgrey);
+  width: 100%;
+  height: 700px;
+  display: flex;
+}
+
+.art-portfolio-section-image, .art-portfolio-section-title {
+  height: 210px;
+}
+
+.art-portfolio-section-image {
+  width: 44%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.art-portfolio-section-image > img {
+  max-height: 180px;
+}
+
+.art-portfolio-section-title {
+  width: 66%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.art-portfolio-section-tech, .art-portfolio-section-description, .art-portfolio-section-title, .art-portfolio-section-sitelink {
+  border-bottom: 1px solid var(--medgrey);
+  padding: .7em 0;
+}
+
+.art-portfolio-section-sitelink a {
+  color: var(--aqua);
+  text-decoration: none;
+}
+
+.art-portfolio-section-sitelink a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.art-portfolio-section-title {
+  padding-top: 0;
+  font-size: 2em;
+}
+.art-portfolio-section-tech {
+  color: var(--blue);
+}
+.art-portfolio-header {
+  padding-bottom: 1px;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 650px;
+    padding-top: 30px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    min-width: 170px;
+  }
+  .portrait {
+    width: 80px;
+    height: 100px;
+  }
+  .art-portfolio-menu-container {
+    width: 110px;
+  }
+  .art-portfolio-content-container {
+    margin-left: 110px;
+  }
+  .portfoilio-section-image > img {
+    max-height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 400px;
+    padding-top: 15px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    max-width: 50px;
+  }
+  #profile-header {
+    flex-wrap: wrap;
+  }
+  .portrait, .title, .about-contact-container {
+    margin-right: 1em;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 5em;
+  }
+  .resume-container {
+    flex-wrap: wrap;
+  }
+  .resume-content-container {
+    width: 90%;
+  }
+  .resume-skills-container {
+    width: 90%;
+    padding: 0;
+  }
+  #tech-skills-header {
+    margin-top: 3em;
+  }
+  .art-portfolio-menu-container {
+    width: 100%;
+    height: 3.5em;
+    border-bottom: 1px dotted var(--medgrey);
+  }
+  .art-portfolio-nav {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: .2em;
+  }
+  .art-portfolio-container {
+    height: 600px;
+  }
+  .art-portfolio-content-container {
+    margin: auto;
+    margin-top: 3.3em;
+    width: 90%;
+    padding: 0;
+    max-height: 500px;
+  }
+  .portfoilio-section-image > img {
+    max-height: 100px;
+  }
+  .art-portfoilio-section-image > img {
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 340px;
+    padding-top: 15px;
+  }
+  .portrait {
+    display: none;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 1em;
+  }
+  .resume-history-work-title {
+    max-width: 3em;
+  }
+  .table-key-skills {
+    width: 4em;
+  }
+  .art-portfolio-section {
+    flex-direction: column;
+    height: 400px;
+  }
+  .portfoilio-section-image, .portfoilio-section-title {
+    height: 150px;
+    width: 100%;
+  }
+  .portfoilio-section-image > img, .art-portfoilio-section-image > img {
+    max-height: 190px;
+  }
+  .art-portfolio-section-title {
+    margin-top: 40px;
+  }
+  .section-nav-icon-container {
+    display: none;
+  }
+}
+
+/*-------------------------------------
+  Contact Section
+--------------------------------------*/
+.contact-container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  display:none;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+.contact-menu-container {
+  width: 147px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.contact-content-container {
+  margin-left: 147px;
+  width: 81%;
+  max-height: 700px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding: 2em;
+}
+
+.contact-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 470px;
+  margin-top: 2em;
+  padding-right: 10px;
+  padding-top: 6em;
+  border-right: 1px dotted var(--medgrey);
+}
+
+.contact-nav-item {
+  padding: 1em;
+}
+
+.contact-nav-item > a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.contact-nav-item > a:hover {
+  color: var(--bluepurple);
+}
+
+.contact-section {
+  margin-top: 1.5em;
+  border-bottom: 1px dotted var(--medgrey);
+  width: 100%;
+  height: 230px;
+  display: flex;
+}
+
+.portfoilio-section-image, .portfoilio-section-title {
+  height: 210px;
+}
+
+.portfoilio-section-image {
+  width: 44%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.portfoilio-section-image > img {
+  max-height: 180px;
+}
+
+.portfoilio-section-title {
+  width: 66%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.contact-section-tech, .contact-section-description, .contact-section-title, .contact-section-sitelink {
+  border-bottom: 1px solid var(--medgrey);
+  padding: .7em 0;
+}
+
+.contact-section-sitelink a {
+  color: var(--bluepurple);
+  text-decoration: none;
+}
+
+.contact-section-sitelink a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.contact-section-title {
+  padding-top: 0;
+  font-size: 2em;
+}
+.contact-section-tech {
+  color: var(--blue);
+}
+
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 650px;
+    padding-top: 30px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    min-width: 170px;
+  }
+  .portrait {
+    width: 80px;
+    height: 100px;
+  }
+  .contact-menu-container {
+    width: 110px;
+  }
+  .contact-content-container {
+    margin-left: 110px;
+  }
+  .contact-section-image > img {
+    max-height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 400px;
+    padding-top: 15px;
+  }
+  .title h1 {
+    font-size: 2.2em;
+    max-width: 50px;
+  }
+  #profile-header {
+    flex-wrap: wrap;
+  }
+  .portrait, .title, .about-contact-container {
+    margin-right: 1em;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 5em;
+  }
+  .resume-container {
+    flex-wrap: wrap;
+  }
+  .resume-content-container {
+    width: 90%;
+  }
+  .resume-skills-container {
+    width: 90%;
+    padding: 0;
+  }
+  #tech-skills-header {
+    margin-top: 3em;
+  }
+  .contact-menu-container {
+    width: 100%;
+    height: 3.5em;
+    border-bottom: 1px dotted var(--medgrey);
+  }
+  .contact-nav {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: .2em;
+  }
+  .contact-container {
+    height: 600px;
+  }
+  .contact-content-container {
+    margin: auto;
+    margin-top: 3.3em;
+    width: 90%;
+    padding: 0;
+    max-height: 500px;
+  }
+  .contact-section-image > img {
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 340px;
+    padding-top: 15px;
+  }
+  .portrait {
+    display: none;
+  }
+  .about-contact-container {
+    padding-top: 2em;
+    padding-left: 1em;
+  }
+  .resume-history-work-title {
+    max-width: 3em;
+  }
+  .table-key-skills {
+    width: 4em;
+  }
+  .contact-section {
+    flex-direction: column;
+    height: 400px;
+  }
+  .contact-section-image, .contact-section-title {
+    height: 150px;
+    width: 100%;
+  }
+  .contact-section-image > img {
+    max-height: 190px;
+  }
+  .contact-section-title {
+    margin-top: 40px;
+  }
+  .section-nav-icon-container {
+    display: none;
+  }
+}
